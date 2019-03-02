@@ -67,8 +67,7 @@ RSpec.describe 'As a visitor', type: :feature do
       visit books_path
 
       within "#title-#{book_1.id}"do
-        expect(page).to have_content ("Rating: 3")
-        expect(page).to have_content ("Number of reviews: 2")
+        expect(page).to have_content(book_1.title)
       end
 
     end
