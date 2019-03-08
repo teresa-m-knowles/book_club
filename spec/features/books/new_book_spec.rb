@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "book new page", type: :feature do
   it "allows user to create a new book" do
     visit new_book_path
-
+    
     fill_in "book[title]", with: "Book Title"
     fill_in "book[page_count]", with: 133
     fill_in "book[year]", with: 2133
@@ -53,7 +53,7 @@ RSpec.describe "book new page", type: :feature do
 
   it 'converts all author names to Title Case' do
     visit new_book_path
-    
+
     fill_in "book[title]", with: "book title"
     fill_in "book[page_count]", with: 100
     fill_in "book[year]", with: 2133
